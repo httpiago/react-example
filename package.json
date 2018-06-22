@@ -1,18 +1,16 @@
 {
   "name": "steal-react-example",
-  "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "version": "1.0.0",
+  "main": "src/index.js",
   "scripts": {
-    "start": "http-server ./",
+    "start": "http-server ./", 
     "//": "Pra usar o live-reload tem que usar esse comando em um terminal e em outro usar o comando start",
     "live-reload": "steal-tools live-reload --main src/index",
     "//": "Gerar uma nova versão do build conforme for editando os arquivos",
     "watch": "steal-tools build --main src/index --watch",
     "build": "steal-tools build --main src/index"
   },
-  "author": "",
-  "license": "ISC",
   "dependencies": {
     "http-server": "^0.11.1",
     "react": "^15.4.1",
