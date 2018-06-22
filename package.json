@@ -5,8 +5,11 @@
   "main": "index.js",
   "scripts": {
     "start": "http-server ./",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "steal-tools --main src/index"
+    "//": "Pra usar o live-reload tem que usar esse comando em um terminal e em outro usar o comando start",
+    "live-reload": "steal-tools live-reload --main src/index",
+    "//": "Gerar uma nova versão do build conforme for editando os arquivos",
+    "watch": "steal-tools build --main src/index --watch",
+    "build": "steal-tools build --main src/index"
   },
   "author": "",
   "license": "ISC",
@@ -30,6 +33,9 @@
     "plugins": [
       "steal-jsx",
       "steal-css"
-    ]
+    ],
+    "configDependencies": [
+      "live-reload"
+    ],
   }
 }
