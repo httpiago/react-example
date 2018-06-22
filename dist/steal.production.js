@@ -1,6 +1,6 @@
 if(typeof steal === "undefined") steal = {};
 steal.bundlesPath = "bundles";
-steal.main = "index";
+steal.main = "src/index";
 steal.configMain = "package.json!npm";
 /*
  *  steal v1.12.3
