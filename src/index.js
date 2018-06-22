@@ -6,9 +6,8 @@ import Routes from './Routes.js'
 // Import styles
 import './styles.css';
 
-ReactDOM.render(
+ReactDOM.render((
   <HashRouter>
     <Routes />
-  </HashRouter>,
-  document.getElementsByTagName('main')[0]
-);
+  </HashRouter>
+), document.getElementsByTagName('main')[0]);
