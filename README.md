@@ -1,4 +1,7 @@
 # steal-react-example
+[Live demo](https://steal-and-react.herokuapp.com)
+
+## Development version
 
 1. Clone this repo.
 2. Run `npm install`
