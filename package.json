@@ -2,14 +2,14 @@
   "name": "steal-react-example",
   "description": "",
   "version": "1.0.0",
-  "main": "src/index.js",
+  "main": "",
   "scripts": {
-    "start": "http-server ./",
+    "start": "http-server ./ -c-1",
     "//": "Pra usar o live-reload tem que usar esse comando em um terminal e em outro usar o comando start",
     "live-reload": "steal-tools live-reload --main src/index",
     "//": "Gerar uma nova versão do build conforme for editando os arquivos",
-    "watch": "cross-env NODE_ENV=production steal-tools build --main src/index --watch --envify",
-    "build": "cross-env NODE_ENV=production steal-tools build --main src/index --envify"
+    "watch": "cross-env NODE_ENV=production steal-tools --main src/index --watch --envify",
+    "build": "cross-env NODE_ENV=production steal-tools --main src/index --envify"
   },
   "dependencies": {
     "http-server": "^0.11.1",

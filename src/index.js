@@ -1,8 +1,8 @@
-import reload from 'live-reload';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter, HashRouter } from 'react-router-dom';
 import Routes from './Routes.js'
+import 'live-reload';
 
 // Import styles
 import './styles.css';
