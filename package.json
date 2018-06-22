@@ -4,7 +4,8 @@
   "version": "1.0.0",
   "main": "",
   "scripts": {
-    "start": "http-server ./ -c-1",
+    "start": "npm run build && npm run server",
+    "server": "http-server ./ -c-1 -p $PORT",
     "live-reload": "steal-tools live-reload --main src/index",
     "watch": "cross-env NODE_ENV=production steal-tools --main src/index --watch --envify",
     "build": "cross-env NODE_ENV=production steal-tools --main src/index --envify"
