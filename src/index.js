@@ -1,43 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { Route, Switch } from 'react-router-dom';
-import Title from './title.jsx';
+import { BrowserRouter, HashRouter } from 'react-router-dom';
+import Routes from './Routes.js'
 
 // Import styles
 import './styles.css';
 
-// Import pages
-import Home from './src/components/Home';
-
-class HelloMessage extends React.Component {
-  render() {
-    return (
-      <div>
-        <img src="logo.svg" id="logo"/>
-        <Title greeting={this.props.greeting} />
-        <ul>
-          <li>
-            To learn more about StealJS, visit <a href="http://stealjs.com/" target="_blank">
-              StealJS.com
-            </a>
-          </li>
-          <li>
-            For live help with simple questions, check out <a href="https://gitter.im/stealjs/steal" target="_blank">
-              the Gitter chat
-            </a>
-          </li>
-          <li>
-            For more complex questions, post to <a href="http://forums.donejs.com/c/stealjs" target="_blank">
-              the forum
-            </a>
-          </li>
-        </ul>
-      </div>
-    );
-  }
-};
-
 ReactDOM.render(
-  <HelloMessage greeting="Welcome to your first StealJS and React app!" />,
+  <HashRouter>
+    <Routes />
+  </HashRouter>,
   document.getElementById('app')
 );
