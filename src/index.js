@@ -1,9 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { Route, Switch } from 'react-router-dom';
 import Title from './title.jsx';
 
 // Import styles
 import './styles.css';
+
+// Import pages
+import Home from './src/components/Home';
 
 class HelloMessage extends React.Component {
   render() {
