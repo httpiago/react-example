@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from 'react-router-dom';
 
+import './Home.less';
 import Title from './title.jsx';
 
 function Logotipo (props) {
