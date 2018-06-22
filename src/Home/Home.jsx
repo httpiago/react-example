@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from 'react-router-dom';
-import Title from './title.jsx';
+
+import Title from './src/Home/title.jsx';
 
 class Home extends React.Component {
   render() {
