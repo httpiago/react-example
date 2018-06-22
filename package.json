@@ -4,12 +4,12 @@
   "version": "1.0.0",
   "main": "src/index.js",
   "scripts": {
-    "start": "http-server ./", 
+    "start": "http-server ./",
     "//": "Pra usar o live-reload tem que usar esse comando em um terminal e em outro usar o comando start",
     "live-reload": "steal-tools live-reload --main src/index",
     "//": "Gerar uma nova versão do build conforme for editando os arquivos",
-    "watch": "steal-tools build --main src/index --watch",
-    "build": "steal-tools build --main src/index"
+    "watch": "cross-env NODE_ENV=production steal-tools build --main src/index --watch --envify",
+    "build": "cross-env NODE_ENV=production steal-tools build --main src/index --envify"
   },
   "dependencies": {
     "http-server": "^0.11.1",
@@ -20,6 +20,7 @@
     "steal-jsx": "^0.0.2"
   },
   "devDependencies": {
+    "cross-env": "^5.2.0",
     "steal-css": "^1.3.2",
     "steal-tools": "^1.11.9"
   },
@@ -35,5 +36,13 @@
     "configDependencies": [
       "live-reload"
     ],
+    "envs": {
+      "production": {
+        "paths": {
+          "react": "node_modules/react/dist/react.min.js",
+          "react-dom": "node_modules/react-dom/dist/react-dom.min.js"
+        }
+      }
+    }
   }
 }
